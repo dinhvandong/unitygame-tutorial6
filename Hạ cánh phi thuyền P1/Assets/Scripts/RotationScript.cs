@@ -47,7 +47,8 @@ public class RotationScript : MonoBehaviour
         if (rotationEnabled)
             if (transformCached.GetComponent<Renderer>() != null)
             {
-                transformCached.Rotate(0, 0, rotationRate * Time.deltaTime, Space.Self);
+                transformCached.Rotate(0, 0, 
+                    rotationRate * Time.deltaTime, Space.Self);
             }
     }
 }

@@ -139,50 +139,50 @@ public class Lander : MonoBehaviour
             rightThrusterAnim.SetBool("ApplyingThrust", false);
             return;
         }
-
-        if (Input.GetAxis("Vertical") > 0)
+        //(Input.GetAxis("Vertical") > 0)
+        if (Input.GetKey("w"))
         {
             shouldPlayThrustSfx = true;
             ApplyForce(bottomThruster, mainThrustPower);
             if (mainThrusterAnim != null && mainThrusterAnim.runtimeAnimatorController != null)
             {
-                mainThrusterAnim.SetBool("ApplyingThrust", true);
+               // mainThrusterAnim.SetBool("ApplyingThrust", true);
             }
         }
         else
         {
             if (mainThrusterAnim != null && mainThrusterAnim.runtimeAnimatorController != null)
             {
-                mainThrusterAnim.SetBool("ApplyingThrust", false);
+                //mainThrusterAnim.SetBool("ApplyingThrust", false);
             }
         }
 
-        if(Input.GetKeyDown("a"))
+        if(Input.GetKey("a"))
             //(Input.GetAxis("Horizontal") > 0)
         {
             shouldPlayThrustSfx = true;
             ApplyForce(leftThruster, sideThrustPower);
             if (leftThrusterAnim != null && leftThrusterAnim.runtimeAnimatorController != null)
             {
-                leftThrusterAnim.SetBool("ApplyingThrust", true);
+               // leftThrusterAnim.SetBool("ApplyingThrust", true);
             }
         }
         else
         {
             if (leftThrusterAnim != null && leftThrusterAnim.runtimeAnimatorController != null)
             {
-                leftThrusterAnim.SetBool("ApplyingThrust", false);
+               // leftThrusterAnim.SetBool("ApplyingThrust", false);
             }
         }
 
-        if (Input.GetKeyDown("d"))
+        if (Input.GetKey("d"))
         //(Input.GetAxis("Horizontal") < 0)
         {
             shouldPlayThrustSfx = true;
             ApplyForce(rightThruster, sideThrustPower);
             if (rightThrusterAnim != null && rightThrusterAnim.runtimeAnimatorController != null)
             {
-                rightThrusterAnim.SetBool("ApplyingThrust", true);
+               // rightThrusterAnim.SetBool("ApplyingThrust", true);
             }
         }
         else
@@ -220,7 +220,7 @@ public class Lander : MonoBehaviour
     {
         if (hitInfo.relativeVelocity.magnitude > 1)
         {
-            HandleLanderDestroy();
+          //  HandleLanderDestroy();
         }
     }
 
